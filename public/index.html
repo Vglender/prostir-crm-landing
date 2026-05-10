@@ -1903,6 +1903,31 @@
   .channel-pill-icon.fb { background: #1877f2; }
   .channel-pill-icon.wa { background: #25d366; }
 
+  @media (max-width: 768px) {
+    .channels-pills {
+      gap: 10px;
+      justify-content: center;
+    }
+    .channel-pill {
+      padding: 0;
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: white;
+      justify-content: center;
+      gap: 0;
+    }
+    .channel-pill > span:not(.channel-pill-icon) { display: none; }
+    .channel-pill-icon {
+      width: 36px;
+      height: 36px;
+      font-size: 13px;
+      border-radius: 9px;
+    }
+    .channels-block { padding: 22px 18px; }
+    .channels-block-label { justify-content: center; }
+  }
+
   .context-section {
     padding: 100px 0;
     background: var(--bg-2);
@@ -5706,7 +5731,7 @@
   <div class="container">
     <div class="pricing-header">
       <div class="section-eyebrow">Тарифы</div>
-      <h2>Три уровня. Под малый,<br><em>средний</em> и&nbsp;крупный бизнес.</h2>
+      <h2>Три уровня. От&nbsp;базового запуска<br>до&nbsp;<em>глубокой интеграции</em>.</h2>
       <p class="pricing-intro">
         Разовая оплата за&nbsp;внедрение и&nbsp;месячная подписка за&nbsp;поддержку.
         Без&nbsp;скрытых платежей. Никакой доплаты за&nbsp;каждого оператора в&nbsp;нижнем тарифе.
