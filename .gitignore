@@ -1,0 +1,16 @@
+# secrets / runtime config
+.env
+.env.*
+
+# state / runtime
+storage/
+
+# backups produced by deploy workflow
+public/index.html.backup-*
+public/preview-v*.html
+
+# editor / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
