@@ -1807,6 +1807,7 @@
     grid-template-columns: 1.6fr 1fr;
     gap: 20px;
   }
+  .channels-row-single { grid-template-columns: 1fr; }
 
   .channels-block {
     background: var(--bg-2);
@@ -3842,14 +3843,16 @@
   .pricing-price-row {
     display: flex;
     align-items: baseline;
-    gap: 8px;
-    margin-bottom: 4px;
+    gap: 10px;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
   }
+  .pricing-price-row:last-child { margin-bottom: 0; }
 
   .pricing-price-num {
     font-family: 'Instrument Serif', serif;
-    font-size: 32px;
-    line-height: 1;
+    font-size: 28px;
+    line-height: 1.1;
     color: var(--ink);
     font-style: italic;
     letter-spacing: -0.02em;
@@ -3858,6 +3861,7 @@
   .pricing-price-label {
     font-size: 13px;
     color: var(--ink-mid);
+    letter-spacing: 0.01em;
   }
 
   .pricing-card-launch {
@@ -5070,30 +5074,21 @@
       </p>
     </div>
 
-    <div class="channels-row">
+    <div class="channels-row channels-row-single">
       <div class="channels-block channels-active">
         <div class="channels-block-label">
           <span class="channels-block-dot"></span>
-          5 каналов · подключено
+          8&nbsp;каналов · готовы к&nbsp;работе
         </div>
         <div class="channels-pills">
           <div class="channel-pill"><span class="channel-pill-icon tg">TG</span><span>Telegram</span></div>
           <div class="channel-pill"><span class="channel-pill-icon viber">V</span><span>Viber</span></div>
+          <div class="channel-pill"><span class="channel-pill-icon ig">IG</span><span>Instagram</span></div>
+          <div class="channel-pill"><span class="channel-pill-icon fb">F</span><span>Facebook</span></div>
+          <div class="channel-pill"><span class="channel-pill-icon wa">W</span><span>WhatsApp</span></div>
           <div class="channel-pill"><span class="channel-pill-icon email">@</span><span>Email</span></div>
           <div class="channel-pill"><span class="channel-pill-icon web">W</span><span>Web Chat</span></div>
           <div class="channel-pill"><span class="channel-pill-icon sms">S</span><span>SMS</span></div>
-        </div>
-      </div>
-
-      <div class="channels-block channels-soon">
-        <div class="channels-block-label">
-          <span class="channels-block-dot soon"></span>
-          3 канала · скоро
-        </div>
-        <div class="channels-pills">
-          <div class="channel-pill soon"><span class="channel-pill-icon ig">IG</span><span>Instagram</span></div>
-          <div class="channel-pill soon"><span class="channel-pill-icon fb">F</span><span>Facebook</span></div>
-          <div class="channel-pill soon"><span class="channel-pill-icon wa">W</span><span>WhatsApp</span></div>
         </div>
       </div>
     </div>
@@ -5714,7 +5709,7 @@
       <h2>Три уровня. Под малый,<br><em>средний</em> и&nbsp;крупный бизнес.</h2>
       <p class="pricing-intro">
         Разовая оплата за&nbsp;внедрение и&nbsp;месячная подписка за&nbsp;поддержку.
-        Без&nbsp;скрытых платежей. Никакой оплаты за&nbsp;seat в&nbsp;нижнем тарифе.
+        Без&nbsp;скрытых платежей. Никакой доплаты за&nbsp;каждого оператора в&nbsp;нижнем тарифе.
       </p>
     </div>
 
@@ -5722,10 +5717,16 @@
       <!-- Card 1: Start -->
       <div class="pricing-card">
         <div class="pricing-card-name">Простір&nbsp;CRM <strong>Start</strong></div>
-        <div class="pricing-card-niche">Малый бизнес · типовая ниша</div>
+        <div class="pricing-card-niche">Базовый запуск</div>
         <div class="pricing-card-price">
-          <div class="pricing-price-row"><span class="pricing-price-num">$300</span><span class="pricing-price-label">внедрение</span></div>
-          <div class="pricing-price-row"><span class="pricing-price-num">+$50</span><span class="pricing-price-label">/мес</span></div>
+          <div class="pricing-price-row">
+            <span class="pricing-price-label">Внедрение —</span>
+            <span class="pricing-price-num">от&nbsp;$300</span>
+          </div>
+          <div class="pricing-price-row">
+            <span class="pricing-price-label">Поддержка —</span>
+            <span class="pricing-price-num">от&nbsp;$50/мес</span>
+          </div>
         </div>
         <div class="pricing-card-launch">⏱ Запуск: 3–5 рабочих дней</div>
         <ul class="pricing-features">
@@ -5746,10 +5747,16 @@
       <div class="pricing-card pricing-card-popular">
         <div class="pricing-card-badge">Популярный</div>
         <div class="pricing-card-name">Простір&nbsp;CRM <strong>Business</strong></div>
-        <div class="pricing-card-niche">Средний бизнес · свои процессы</div>
+        <div class="pricing-card-niche">Рабочая система</div>
         <div class="pricing-card-price">
-          <div class="pricing-price-row"><span class="pricing-price-num">$2&nbsp;000</span><span class="pricing-price-label">внедрение</span></div>
-          <div class="pricing-price-row"><span class="pricing-price-num">+$100</span><span class="pricing-price-label">/мес</span></div>
+          <div class="pricing-price-row">
+            <span class="pricing-price-label">Внедрение —</span>
+            <span class="pricing-price-num">от&nbsp;$2&nbsp;000</span>
+          </div>
+          <div class="pricing-price-row">
+            <span class="pricing-price-label">Поддержка —</span>
+            <span class="pricing-price-num">от&nbsp;$100/мес</span>
+          </div>
         </div>
         <div class="pricing-card-launch">⏱ Запуск: 2–3 недели</div>
         <div class="pricing-features-prelude">Всё из&nbsp;<strong>Start</strong>, плюс:</div>
@@ -5769,10 +5776,16 @@
       <!-- Card 3: Enterprise -->
       <div class="pricing-card">
         <div class="pricing-card-name">Простір&nbsp;CRM <strong>Enterprise</strong></div>
-        <div class="pricing-card-niche">Крупный бизнес · ERP-интеграция</div>
+        <div class="pricing-card-niche">Глубокая интеграция</div>
         <div class="pricing-card-price">
-          <div class="pricing-price-row"><span class="pricing-price-num">$8&nbsp;000</span><span class="pricing-price-label">внедрение</span></div>
-          <div class="pricing-price-row"><span class="pricing-price-num">+$500</span><span class="pricing-price-label">/мес</span></div>
+          <div class="pricing-price-row">
+            <span class="pricing-price-label">Внедрение —</span>
+            <span class="pricing-price-num">от&nbsp;$8&nbsp;000</span>
+          </div>
+          <div class="pricing-price-row">
+            <span class="pricing-price-label">Поддержка —</span>
+            <span class="pricing-price-num">от&nbsp;$500/мес</span>
+          </div>
         </div>
         <div class="pricing-card-launch">⏱ Запуск: 4–8 недель</div>
         <div class="pricing-features-prelude">Всё из&nbsp;<strong>Business</strong>, плюс:</div>
@@ -5859,7 +5872,7 @@
           <strong>Цикл гипотез</strong> вместо «подключили и&nbsp;забыли»: каждые 2&nbsp;недели
           смотрим что работает, корректируем. <strong>AI с&nbsp;контекстом ERP:</strong> бот
           видит остатки, цену, статус заказа клиента, отвечает по&nbsp;делу, не&nbsp;общими
-          фразами. <strong>Без&nbsp;принудительной оплаты за&nbsp;seat в&nbsp;нижнем тарифе:</strong>
+          фразами. <strong>Без&nbsp;доплаты за&nbsp;каждого оператора в&nbsp;нижнем тарифе:</strong>
           до&nbsp;5&nbsp;операторов в&nbsp;Start, далее +$5 за&nbsp;каждого, без&nbsp;апгрейда.
         </div>
       </details>
